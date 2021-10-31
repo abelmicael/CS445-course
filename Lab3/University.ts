@@ -1,6 +1,6 @@
 class University {
 
-    static readonly pi:number=3.14;
+    
     name:String;
     dept:String;
  
