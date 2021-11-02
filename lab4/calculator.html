@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <label for="quantity">Enter First Number:</label>
+<input style="width: 100px;"type="number" id="Fnumber" name="quantity" ><br><br>
+<label for="quantity">Enter Second Number:</label>
+<input style="width: 100px;"type="number" id="Snumber" name="quantity"><br><br>
+<label for="quantity">Result:</label>
+<input style="width: 50px;"type="number" id="quantity" name="quantity"><br><br>
+<input type="button" value="submit" id='sub'>
+
+</body>
+<script>
+
+   
+    document.getElementById('sub').addEventListener('click', function(){
+
+        let x = parseInt(document.getElementById('Fnumber').value)
+        let y = parseInt(document.getElementById('Snumber').value)
+
+        
+        document.getElementById('quantity').value = x+y;
+        document.getElementById('Fnumber').value= null;
+        document.getElementById('Snumber').value= null;
+      
+        console.log(x+y)
+    })
+    
+ 
+   
+
+</script>
+</html>

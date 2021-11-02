@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SWAP</title>
+    </head>
+
+    <style>
+        .container{
+            border: 2px solid salmon;
+            background-color: black;
+            height: 100vh;
+    
+        }
+        .pic1{
+            border: 2px solid salmon;
+            margin-top: 50px;
+           
+            float: left;
+            border-radius: 25px;
+            background-size: cover;
+
+        }
+        .pic2{
+            border: 2px solid salmon;
+           
+           margin-left: 100px;
+            float: left;
+            border-radius: 25px;
+            background-size: cover;
+           
+        }
+        button{
+           
+            border-radius: 10px;
+            border: 2px solid salmon;
+            width: 100px;
+            height: 30px;
+            font-family: cursive;
+            font-weight: bolder;
+            align-content: center;
+            float:left ;
+        }
+       #img{
+           background-size:auto;
+       }
+    </style>
+
+   
+<body>
+  
+   <div class="container">
+    <button id="btn" ><b>SWAP</b></button>
+       <div class="pic1"><img  id ='img1'style="ckground-size: cover; width: fit-content; height: fit-content;" ></div>
+       <div class="pic2"><img  id = "img2" style="background-size: cover; width: fit-content; height: fit-content;" ></div>
+       
+   
+   </div>
+   
+
+</body>
+
+<script>
+
+
+window.onload = function(){
+
+    const array = ["./iimage.jpg","./img2.jpg"];
+    
+    let input1 = document.getElementById("img1")
+    input1.setAttribute('src',array[0])
+
+    let input2 = document.getElementById("img2")
+    input2.setAttribute('src',array[1])
+    
+    
+    let btn = document.getElementById("btn").addEventListener("hover",function(){
+        
+        input1.setAttribute('src',array[0])
+        input2.setAttribute('src',array[1])
+
+        let temp = array[0];
+        array[0]=array[1];
+        array[1]=temp;
+  })
+}
+        
+      
+      
+
+    
+
+</script>
+</html>
+
